@@ -1,3 +1,5 @@
+/* eslint-disable no-tabs */
+/* eslint-disable no-plusplus */
 /*
  * stmnts-07.js
  * Language: javascript
@@ -69,7 +71,7 @@ function numberOfOdds(num) {
  */
 function addUpTheNumbers(num) {
   let sum = 0;
-  for (let i = 0; i >= num; i++) {
+  for (let i = 0; i <= num; i++) {
     sum += i;
   }
   return sum;
@@ -93,19 +95,18 @@ function addUpTheNumbers(num) {
 function gradeGenerator(score) {
   if (score < 60) {
     return 'F';
-  } else if (score < 70) {
+  } if (score < 70) {
     return 'D';
-  } else if (score < 80) {
+  } if (score < 80) {
     return 'C';
-  } else if (score < 90) {
+  } if (score < 90) {
     return 'B';
-  } else if (score <= 100) {
+  } if (score <= 100) {
     return 'A';
-  } else {
-    return 'Really bad score!';
   }
-
-  /**
+  return 'Really bad score!';
+}
+/**
    * Calculates a string of the student's name and grade
    * @param {string} name - the name of the student
    * @param {number} score - the numeric grade score for a student
@@ -121,20 +122,20 @@ function gradeGenerator(score) {
    * ? note: you have to use English grammar's correct indefinite article
    * ? it's 'an A' (not a A) and 'an F' (not a F)
    */
-  function getGrade(name, score) {
-    const grade = gradeGenerator(score);
+function getGrade(name, score) {
+  const grade = gradeGenerator(score);
 
-    const article = ['A', 'E', 'I', 'O', 'U'].includes(grade.charAt(0).toUpperCase()) ? 'an' : 'a';
+  const article = ['A', 'E', 'I', 'F', 'O', 'U'].includes(grade.charAt(0).toUpperCase()) ? 'an' : 'a';
 
-    return `${name} got ${article} ${grade}`;
-  }
+  return `${name} got ${article} ${grade}`;
+}
 
-  module.exports = {
-    logicalAnd,
-    logicalOr,
-    invertBoolean,
-    numberOfOdds,
-    gradeGenerator,
-    getGrade,
-    addUpTheNumbers,
-  };
+module.exports = {
+  logicalAnd,
+  logicalOr,
+  invertBoolean,
+  numberOfOdds,
+  gradeGenerator,
+  getGrade,
+  addUpTheNumbers,
+};
