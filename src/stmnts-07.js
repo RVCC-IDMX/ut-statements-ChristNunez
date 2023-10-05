@@ -13,7 +13,7 @@
 
  */
 function logicalAnd(a, b) {
-return a && b;
+  return a && b;
 }
 
 /**
@@ -23,7 +23,7 @@ return a && b;
  * @returns {boolean} - true if a or b is truthy, false if both are falsy
  */
 function logicalOr(a, b) {
-return a || b;
+  return a || b;
 }
 
 /**
@@ -32,7 +32,7 @@ return a || b;
  * @returns {boolean} - the opposite of the given boolean
  */
 function invertBoolean(bool) {
-return !bool;
+  return !bool;
 }
 
 /**
@@ -49,13 +49,13 @@ return !bool;
 
  */
 function numberOfOdds(num) {
-let count = 0;
-for (let i = 0; i < num; i++){
-  if(i % 2 !== 0){
-    count++;
+  let count = 0;
+  for (let i = 0; i < num; i++) {
+    if (i % 2 !== 0) {
+      count++;
+    }
   }
-}
-return count;
+  return count;
 }
 
 /**
@@ -68,11 +68,11 @@ return count;
  * ? For example, num is 4 then return 10 because 1 + 2 + 3 + 4 = 10.
  */
 function addUpTheNumbers(num) {
-let sum = 0;
-for (let i = 0; i >= num; i++){
-  sum += i;
-}
-return sum;
+  let sum = 0;
+  for (let i = 0; i >= num; i++) {
+    sum += i;
+  }
+  return sum;
 }
 
 /**
@@ -103,38 +103,38 @@ function gradeGenerator(score) {
     return 'A';
   } else {
     return 'Really bad score!';
-}
+  }
 
-/**
- * Calculates a string of the student's name and grade
- * @param {string} name - the name of the student
- * @param {number} score - the numeric grade score for a student
- * @returns {string} - the student's name and their letter grade
- * ? name is a string and score is a number
- * ? 0 through 100
- *
- * ? MUST CALL the above gradeGenerator() from above
- * ? to find a letter grade with that score
- * ? return a string written like:
- * ? Francine got an A
- * ? David got a B
- * ? note: you have to use English grammar's correct indefinite article
- * ? it's 'an A' (not a A) and 'an F' (not a F)
- */
-function getGrade(name, score) {
-  const grade = gradeGenerator(score);
+  /**
+   * Calculates a string of the student's name and grade
+   * @param {string} name - the name of the student
+   * @param {number} score - the numeric grade score for a student
+   * @returns {string} - the student's name and their letter grade
+   * ? name is a string and score is a number
+   * ? 0 through 100
+   *
+   * ? MUST CALL the above gradeGenerator() from above
+   * ? to find a letter grade with that score
+   * ? return a string written like:
+   * ? Francine got an A
+   * ? David got a B
+   * ? note: you have to use English grammar's correct indefinite article
+   * ? it's 'an A' (not a A) and 'an F' (not a F)
+   */
+  function getGrade(name, score) {
+    const grade = gradeGenerator(score);
 
-  const article = ['A', 'E', 'I', 'O', 'U'].includes(grade.charAt(0).toUpperCase()) ? 'an' : 'a';
+    const article = ['A', 'E', 'I', 'O', 'U'].includes(grade.charAt(0).toUpperCase()) ? 'an' : 'a';
 
-  return `${name} got ${article} ${grade}`;
-}
+    return `${name} got ${article} ${grade}`;
+  }
 
-module.exports = {
-  logicalAnd,
-  logicalOr,
-  invertBoolean,
-  numberOfOdds,
-  gradeGenerator,
-  getGrade,
-  addUpTheNumbers,
-};
+  module.exports = {
+    logicalAnd,
+    logicalOr,
+    invertBoolean,
+    numberOfOdds,
+    gradeGenerator,
+    getGrade,
+    addUpTheNumbers,
+  };
